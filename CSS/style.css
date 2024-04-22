@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    text-decoration: none;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.page-1{
+    width: 100%;
+    height: 100vh;
+    padding-top: 0.1px;
+    /* background-color: firebrick; */
+}
+.nav{
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.75vw 4vw;
+    z-index: 999;
+    border-bottom: 0.35vw solid green;
+    /* box-shadow: -1px 18px 56px -19px rgba(0,0,0,0.87); */
+    background-color: rgb(255, 255, 255);
+}
+.nav #logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+}
+#logo img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#nav-data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+#nav-data a{
+    font-size: 1vw;
+    transition: all ease 0.5s;
+    color: black;
+}
+#nav-data a:nth-child(1){
+    font-weight: 500;
+    color: rgb(132, 22, 22);
+}
+#nav-data a:hover{
+    font-size: 1.1vw;
+    color: rgb(203, 58, 58);
+}
+.user{
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border: 0.15vw solid rgb(114, 4, 4);
+}
+.user i{
+    font-size: 1.75vw;
+}
+.hero{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* margin-top: 10vh; */
+    display: flex;
+    padding: 4.5vw;
+    padding-top: 9vw;
+    align-items: center;
+    background-image: url(/images/bg-new-1.jpg);
+    background-size: cover;
+    background-position: cover;
+}
+.h-left{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    /* background-color: red; */
+}
+.h-left h1{
+    padding: 0.5vw 0;
+    font-size: 4vw;
+    font-family: Calibri;
+}
+.h-left h4{
+    font-size: 1vw;
+    font-weight: 500;
+    width: 82%;
+}
+.h-left button{
+    margin-top: 1.5vw;
+    padding: 0.75vw;
+    width: 16%;
+    font-size: 1vw;
+    border: none;
+    border-radius: 0.5vw;
+    transition: all ease 0.5s;
+}
+.h-left button:hover{
+    color: white;
+    background-color: rgb(114, 4, 4);
+    box-shadow: 1px 0px 73px 4px rgba(183,29,29,1);
+}
+.h-right{
+    height: 100%;
+    width: 40%;
+    padding: 4vw;
+}
+.h-right img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all ease 0.7s;
+    filter: drop-shadow(0px 0px 18px #ffffff);
+}
+.h-right img:hover{
+    transform: rotate(360deg);
+}
+
+
+.page-2{
+    height: 100vh;
+    width: 100%;
+    padding: 7.5vw 4.5vw;
+    padding-bottom: 0;
+}
+.pg2-head{
+    width: 100%;
+    height: 11vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pg2-head h1{
+    font-weight: 600;
+    font-family: Calibri;
+    text-transform: uppercase;
+    color: rgb(18, 18, 18);
+    font-size: 2.5vw;
+}
+.pg2-head h3{
+    color: rgb(104, 104, 104);
+    font-family: calibri;
+    font-size: 1.15vw;
+    padding: 1vw;
+    font-weight: 300;
+}
+.pg2-flow{
+    height: 75vh;
+    width: 100%;
+    padding: 2vw 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 5vw 0;
+    /* gap: 10vw; */
+    /* background-color: darkkhaki; */
+}
+.box{
+    width: 17vw;
+    height: 17vw;
+    background-color: transparent;
+    position: relative;
+    /* overflow: hidden; */
+    border-radius: 10px;
+    perspective: 1000px;
+    /* box-shadow: 0px 0px 26px -5px rgba(0,0,0,0.75); */
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+.box:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    background-color: #d1d1d1;
+    color: black;
+}
+.flip-card-front img{
+    width: 25px;
+}
+.flip-card-back {
+    background-color: #d1d1d1;
+    color: black;
+    transform: rotateY(180deg);
+}
